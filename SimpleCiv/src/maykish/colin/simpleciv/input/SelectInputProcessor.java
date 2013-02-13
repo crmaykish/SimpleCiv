@@ -1,7 +1,8 @@
-package maykish.colin.simpleciv.util;
+package maykish.colin.simpleciv.input;
 
 import maykish.colin.simpleciv.GamePlay;
 import maykish.colin.simpleciv.map.Map;
+import maykish.colin.simpleciv.util.Point;
 
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.OrthographicCamera;

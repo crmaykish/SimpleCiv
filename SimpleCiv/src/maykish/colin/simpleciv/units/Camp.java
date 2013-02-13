@@ -12,10 +12,6 @@ public class Camp extends Unit {
 		textureName = "camp";
 	}
 
-	Player owner;
-	private int maxHealth;
-	private int currentHealth;
-
 	@Override
 	protected void setStats() {
 		maxMoves = 0;

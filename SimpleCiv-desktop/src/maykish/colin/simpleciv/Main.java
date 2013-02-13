@@ -8,8 +8,8 @@ public class Main {
 		LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
 		cfg.title = "SimpleCiv";
 		cfg.useGL20 = true;
-		cfg.width = 1600;
-		cfg.height = 900;
+		cfg.width = 1024;
+		cfg.height = 600;
 		
 		new LwjglApplication(new SimpleCivGame(), cfg);
 	}

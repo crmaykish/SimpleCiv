@@ -1,4 +1,4 @@
-package maykish.colin.simpleciv.util;
+package maykish.colin.simpleciv.input;
 
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -20,9 +20,9 @@ public class CameraInputProcessor implements InputProcessor {
 		startX = screenX;
 		startY = screenY;
 
-		cameraStart = new Vector2(screenX, screenY).add(
-				camera.position.x - camera.viewportWidth / 2, 
-				camera.position.y - camera.viewportHeight / 2);
+		cameraStart = new Vector2(screenX, screenY).add(camera.position.x
+				- camera.viewportWidth / 2, camera.position.y
+				- camera.viewportHeight / 2);
 
 		return false;
 	}
@@ -39,13 +39,13 @@ public class CameraInputProcessor implements InputProcessor {
 
 	@Override
 	public boolean touchDragged(int screenX, int screenY, int pointer) {
-
-		camera.position.x = -screenX + camera.viewportWidth / 2 + cameraStart.x;
-		camera.position.y = -screenY + camera.viewportHeight / 2 + cameraStart.y;
-
+		if (cameraStart != null){
+			camera.position.x = -screenX + camera.viewportWidth / 2 + cameraStart.x;
+			camera.position.y = -screenY + camera.viewportHeight / 2 + cameraStart.y;
+		}
 		return false;
 	}
-	
+
 	@Override
 	public boolean keyDown(int keycode) {
 		// TODO Auto-generated method stub

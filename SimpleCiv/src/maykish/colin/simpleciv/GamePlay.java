@@ -19,6 +19,7 @@ public class GamePlay {
 	Map map;
 	
 	public GamePlay(Map map){
+		
 		this.map = map;
 		
 		initPlayers();

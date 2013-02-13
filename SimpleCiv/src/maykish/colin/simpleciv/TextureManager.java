@@ -45,6 +45,11 @@ public class TextureManager {
 		textureMap.put("selected", new TextureRegion(new Texture(Gdx.files.internal("selected.png"))));
 		textureMap.put("valid", new TextureRegion(new Texture(Gdx.files.internal("valid.png"))));
 		textureMap.put("stats", new TextureRegion(new Texture(Gdx.files.internal("gamestatsbox.png"))));
+		textureMap.put("logo", new TextureRegion(new Texture(Gdx.files.internal("logo.png"))));
+		textureMap.put("background", new TextureRegion(new Texture(Gdx.files.internal("titlebg.png"))));
+		textureMap.put("newgame", new TextureRegion(new Texture(Gdx.files.internal("newgame.png"))));
+		textureMap.put("quit", new TextureRegion(new Texture(Gdx.files.internal("quit.png"))));
+		
 		
 		// Units
 		textureMap.put("warrior", new TextureRegion(new Texture(Gdx.files.internal("warrior.png"))));

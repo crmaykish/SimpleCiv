@@ -39,18 +39,10 @@ public class Renderer {
 		drawMap();
 		drawMapDetails();
 		
-//		drawFog();
-		
 		drawUI();
-		
-//		batch.draw(map.generateMinimap(), 10, 10);
 		
 		batch.end();
 	}
-	
-//	private void drawFog(){
-//		batch.draw(texMan.get("fog"), 100, 100);
-//	}
 	
 	private void drawMap(){
 		for (int i = 0; i < map.getWidth(); i++) {
@@ -59,9 +51,9 @@ public class Renderer {
 				// Is the tile visible?
 				if (map.getTileAt(i, j).isVisible()){
 				
-					// Draw the tile texture
+//					// Draw the tile texture
 					batch.draw(texMan.get(map.getTileAt(i, j).getTextureName()), map.tileSize() * i, map.tileSize() * j);
-					
+//					
 					// Draw tile's top unit if it has one
 					if (map.getTileAt(i, j).hasUnits()){
 						
@@ -109,7 +101,6 @@ public class Renderer {
 		// TODO: don't hardcode this
 		Point statsBoxLoc = convertToScreenCoords(Gdx.graphics.getWidth() - 128, 0);
 		
-		
 		batch.draw(texMan.get("stats"), statsBoxLoc.x, statsBoxLoc.y);
 		font.draw(batch, "Day: " + gamePlay.getTurnsPassed(), statsBoxLoc.x + 5, statsBoxLoc.y + 5);
 		font.draw(batch, "Turn: " + gamePlay.getCurrentPlayerName(), statsBoxLoc.x + 5, statsBoxLoc.y + 25);
@@ -119,7 +110,7 @@ public class Renderer {
 		font.draw(batch, gamePlay.player1.getName(), statsBoxLoc.x + 5, statsBoxLoc.y + 68);
 		font.setColor(gamePlay.player2.color);
 		font.draw(batch, gamePlay.player2.getName(), statsBoxLoc.x + 5, statsBoxLoc.y + 87);
-		
+
 	}
 	
 //	private void drawMinimap(){
